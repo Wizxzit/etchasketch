@@ -27,9 +27,12 @@ body {
 }
 
 #pad {
+    display: flex;
+    flex-wrap: wrap;
     margin: 5rem auto;
     height: 50vh;
     width: 50vh;
+    border: 1px solid red;
     background-color: white;
 }
 
@@ -38,5 +41,4 @@ body {
     flex: 1; 
     min-width: 100vh;
     background-color: #121212;
-
 }

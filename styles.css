@@ -21,19 +21,40 @@ body {
 }
 
 #container {
+    border: 1px solid red;
+
+    display: flex;
     justify-content: center;
     align-content: center;
-    background-color: #776a0b88;
+    background-color: #000000de;
+}
+
+#sidebar {
+    border: 1px solid blue;
+
+    background-color: #1d1d1d;
+    color: white;
+    width: 170px;  
 }
 
 #pad {
+    border: 3px solid green;
+    flex: 1;
+
     display: flex;
     flex-wrap: wrap;
-    margin: 5rem auto;
-    height: 50vh;
-    width: 50vh;
-    border: 1px solid red;
+    aspect-ratio: 1/1 ;
     background-color: white;
+}
+
+#pixel {
+    background-color: black;
+    opacity: 0;
+}
+
+#black {
+    background-color: black;
+    opacity: 0;
 }
 
 #footer {

@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#header {
+    font-size: 3rem;
+    color: white;
+    background-color: #121212;
+    height: 4rem;
+    padding: .4rem;
+    min-width: 100vh;
+}
+
+#container {
+    justify-content: center;
+    align-content: center;
+    background-color: #776a0b88;
+}
+
+#pad {
+    margin: 5rem auto;
+    height: 50vh;
+    width: 50vh;
+    background-color: white;
+}
+
+#footer {
+    color: white;
+    flex: 1; 
+    min-width: 100vh;
+    background-color: #121212;
+
+}

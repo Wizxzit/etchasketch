@@ -6,18 +6,20 @@ const pad = document.getElementById("pad");
 const sixteen = document.getElementById("scaleOne");
 const threeTwo = document.getElementById("scaleTwo");
 const sixfour = document.getElementById("scaleThree");
+const eraser = document.getElementById("eraser");
 
 // buttons
-sixteen.addEventListener('click', a => {
+sixteen.addEventListener('click', function() {
     clearCanvas();
     makeCanvas(16);});
-threeTwo.addEventListener('click', a => {
+threeTwo.addEventListener('click', function() {
     clearCanvas();
     makeCanvas(32)});
-sixfour.addEventListener('click', a => {
+sixfour.addEventListener('click', function() {
     clearCanvas();
     makeCanvas(64)});
-
+eraser.addEventListener('click', function() {
+    makeCanvas(3)});
 
 // functions
 // makeCanvas adds pixels to the sketch board according to the input number
@@ -37,7 +39,7 @@ function makeCanvas(pixelNum) {
             pixel.style.border = "1px solid green";
             pixel.id = "pixel";
             pixel.addEventListener('click', function () {
-                pixel.style.backgroundColor = "white";
+                pixel.style.backgroundColor = "black";
             });
             vertical.appendChild(pixel);
         }
@@ -49,4 +51,4 @@ function clearCanvas() {
 };
 
 
-makeCanvas(3);
+makeCanvas(5);

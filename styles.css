@@ -8,7 +8,7 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 80vh;
     background-color: rgb(51, 49, 49);
 }
 
@@ -46,18 +46,16 @@ body {
 }
 
 #pad {
-    border: 3px solid green;
     flex: 1;
-
     display: flex;
+
     flex-wrap: wrap;
     aspect-ratio: 1/1 ;
     background-color: white;
 }
 
 #pixel {
-    background-color: black;
-    opacity: 0;
+    background-color: white;
 }
 
 #scaleContainer {
@@ -68,11 +66,23 @@ body {
 #colorContainer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 }
 
 #colorText {
     display: block;
+    flex: 1 1 auto;
+    font-size: 1rem;
+}
+
+.colorButton {
+    display: inline-block;
+    aspect-ratio: 1/1;
+    width: 20px;
+    margin: 0;
+    border: 1px solid white;
 }
 
 .black {
@@ -91,7 +101,7 @@ body {
     background-color: yellow;
 }
 
-.green. {
+.green {
     background-color: green;
 }
 
@@ -99,9 +109,22 @@ body {
     background-color: orange;
 }
 
+#toolContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.eraser {
+    display: block;
+    flex: 1;
+    padding: 1rem;
+    background-color: white;
+}
+
 #footer {
     color: white;
     flex: 1; 
     min-width: 100vh;
+    overflow: hidden;
     background-color: #121212;
 }

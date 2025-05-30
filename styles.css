@@ -67,9 +67,6 @@ body {
 
 #pixel {
     background-color: white;
-}
-
-#pixel:hover {
     
 }
 
@@ -95,8 +92,9 @@ body {
 .colorButton {
     display: inline-block;
     aspect-ratio: 1/1;
+    border-radius: 5px;
     width: 20px;
-    margin: 0;
+    margin: 0 auto;
     border: 1px solid white;
 }
 
@@ -137,15 +135,37 @@ body {
     justify-content: center;
 }
 
+#middleContainer {
+    display:flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+}
+
+#rainbow {
+    display: block;
+    font-size: 1.3rem;
+    color: blue;
+    flex: 1;
+    padding: 0.5rem;
+    background: linear-gradient(120deg, red, yellow, green, orange);
+}
+
+
+
 #eraser {
     display: block;
     flex: 1;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: white;
 }
 
+#eraser:hover {
+    transform: scale(1.1);
+}
+
 #eraser:active {
-    transform: scale(0.8);
+    transform: scale(0.9);
 }
 
 #footer {

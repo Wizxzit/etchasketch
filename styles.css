@@ -8,7 +8,7 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 100vh;
     background-color: rgb(51, 49, 49);
 }
 
@@ -22,13 +22,11 @@ body {
 }
 
 #container {
-    border: 1px solid red;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
 
     background-color: #000000de;
-    max-width: 100vh;
 }
 
 #sidebar {
@@ -36,13 +34,22 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px solid blue;
+    flex: 0 1 1;
 
     background-color: #1d1d1d;
     color: white;
 
     padding: .3rem;
     width: 140px;  
+}
+
+#padContainer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
 }
 
 #pad {
@@ -52,6 +59,10 @@ body {
     flex-wrap: wrap;
     aspect-ratio: 1/1 ;
     background-color: white;
+    min-width: 50vh;
+    max-width: 70vh;
+    padding: 5rem auto;
+    background-color: black;
 }
 
 #pixel {
@@ -85,27 +96,27 @@ body {
     border: 1px solid white;
 }
 
-.black {
+#black {
     background-color: black;
 }
 
-.red {
+#red {
     background-color: red;
 }
 
-.blue {
+#blue {
     background-color: blue;
 }
 
-.yellow {
+#yellow {
     background-color: yellow;
 }
 
-.green {
+#green {
     background-color: green;
 }
 
-.orange {
+#orange {
     background-color: orange;
 }
 
@@ -114,7 +125,7 @@ body {
     justify-content: center;
 }
 
-.eraser {
+#eraser {
     display: block;
     flex: 1;
     padding: 1rem;
@@ -125,6 +136,5 @@ body {
     color: white;
     flex: 1; 
     min-width: 100vh;
-    overflow: hidden;
     background-color: #121212;
 }

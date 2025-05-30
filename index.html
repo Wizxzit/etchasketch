@@ -8,31 +8,35 @@
     <script src="javascript.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
+
 <body>
     <div id="header">Etch-A-Sketch</div>
     <div id="container">
-    <div id="sidebar">sidebar
-        <div id="scaleContainer">
-            pixel density
-        <button id="scale">16x16</button>
-        <button id="scale">32x32</button>
-        <button id="scale">64x64</button>
+        <div id="sidebar">sidebar
+            <div id="scaleContainer">
+                pixel density
+                <button id="scaleOne">16x16</button>
+                <button id="scaleTwo">32x32</button>
+                <button id="scaleThree">64x64</button>
+            </div>
+
+            <div id="middleContainer">
+                <div id="colorText">colours</div>
+                <div id="colorContainer">
+                    <button class="colorButton" id="black"></button>
+                    <button class="colorButton" id="red"></button>
+                    <button class="colorButton" id="blue"></button>
+                    <button class="colorButton" id="yellow"></button>
+                    <button class="colorButton" id="green"></button>
+                    <button class="colorButton" id="orange"></button>
+                </div>
+            </div>
+            <div id="toolContainer">
+                <button id="eraser">eraser</button>
+            </div>
         </div>
-        
-        <div id="colorContainer">
-            <div id="colortext">colours</div>
-        <button class="colorButton black"></button>
-        <button class="colorButton red"></button>
-        <button class="colorButton blue"></button>
-        <button class="colorButton yellow"></button>
-        <button class="colorButton green"></button>
-        <button class="colorButton orange"></button>
-        </div>
-        <div id="toolContainer">
-        <button class="colorButton eraser">eraser</button>
-        </div>
-    </div>
-        <div id="pad">pad
+        <div id="padContainer">
+        <div id="pad"></div>
         </div>
     </div>
     <div id="footer">footer here</div>

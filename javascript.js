@@ -90,15 +90,11 @@ function makeCanvas(pixelNum) {
             let pixel = document.createElement(`div${j}`);
             pixel.margin = "0";
             pixel.style.flex = `1`;
-            pixel.style.border = "1px solid green";
             pixel.id = "pixel";
             pixel.draggable = false;
             pixel.addEventListener('mousedown', function () {
                 pixel.style.backgroundColor = brush;
             });
-            //pixel.addEventListener('mouseleave', function () {
-               // pixel.style.backgroundColor = previousColor;
-            //});
             vertical.appendChild(pixel);
         }
     }

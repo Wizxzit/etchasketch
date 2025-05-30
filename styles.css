@@ -67,16 +67,6 @@ body {
 
 #pixel {
     background-color: white;
-    transition: background 400ms ease-in;
-}
-
-#pixel:hover {
-    background-color: black;
-}
-
-#pixel::after {
-    transition: background 400ms ease-out;
-    background-color: blue;
 }
 
 #scaleContainer {

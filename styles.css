@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: rgb(51, 49, 49);
 }
 
 #header {
@@ -22,19 +23,26 @@ body {
 
 #container {
     border: 1px solid red;
-
     display: flex;
     justify-content: center;
     align-content: center;
+
     background-color: #000000de;
+    max-width: 100vh;
 }
 
 #sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     border: 1px solid blue;
 
     background-color: #1d1d1d;
     color: white;
-    width: 170px;  
+
+    padding: .3rem;
+    width: 140px;  
 }
 
 #pad {
@@ -52,9 +60,43 @@ body {
     opacity: 0;
 }
 
-#black {
+#scaleContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#colorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#colorText {
+    display: block;
+}
+
+.black {
     background-color: black;
-    opacity: 0;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green. {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
 }
 
 #footer {

@@ -67,7 +67,16 @@ body {
 
 #pixel {
     background-color: white;
-    
+    transition: background 400ms ease-in;
+}
+
+#pixel:hover {
+    background-color: black;
+}
+
+#pixel::after {
+    transition: background 400ms ease-out;
+    background-color: blue;
 }
 
 #scaleContainer {
@@ -106,29 +115,13 @@ body {
     transform: scale(1.1);
 }
 
-#black {
-    background-color: black;
-}
-
-#red {
-    background-color: red;
-}
-
-#blue {
-    background-color: blue;
-}
-
-#yellow {
-    background-color: yellow;
-}
-
-#green {
-    background-color: green;
-}
-
-#orange {
-    background-color: orange;
-}
+/* color tiles */
+#black {background-color: black;}
+#red {background-color: red;}
+#blue {background-color: blue;}
+#yellow {background-color: yellow;}
+#green {background-color: green;}
+#orange {background-color: orange;}
 
 #toolContainer {
     display: flex;
@@ -144,13 +137,16 @@ body {
 
 #rainbow {
     display: block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: blue;
     flex: 1;
     padding: 0.5rem;
     background: linear-gradient(120deg, red, yellow, green, orange);
 }
 
+#rainbow:hover {
+    transform: scale(1.1);
+}
 
 
 #eraser {

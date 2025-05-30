@@ -1,5 +1,5 @@
 // variables
-let brush = "black";
+let brush = "black", rainbowToggle = false;
 
 // DOM 
 const pad = document.getElementById("pad");
@@ -35,21 +35,44 @@ sixfour.addEventListener('click', function () {
     makeCanvas(64)
 });
 // black
-black.addEventListener('click', function () { brush = "black"; });
+black.addEventListener('click', function () { 
+    rainbowToggle = false;
+    brush = "black"; });
 // red
-red.addEventListener('click', function () { brush = "red"; });
+red.addEventListener('click', function () { 
+    rainbowToggle = false;
+    brush = "red"; });
 // blue
-blue.addEventListener('click', function () { brush = "blue"; });
+blue.addEventListener('click', function () { 
+    rainbowToggle = false;
+    brush = "blue"; });
 // yellow
-yellow.addEventListener('click', function () { brush = "yellow"; });
+yellow.addEventListener('click', function () { 
+    rainbowToggle = false;
+    brush = "yellow"; });
 // green 
-green.addEventListener('click', function () { brush = "green"; });
+green.addEventListener('click', function () { 
+    rainbowToggle = false;
+    brush = "green"; });
 // orange
-orange.addEventListener('click', function () { brush = "orange"; });
+orange.addEventListener('click', function () { 
+    rainbowToggle = false;
+    brush = "orange"; });
 // rainbow
-rainbow.addEventListener('click', function () { brush = randomColor; });
+rainbow.addEventListener('click', function () { 
+    rainbowToggle = true;
+});
+
+setInterval (a => {
+    if (rainbowToggle == true) {
+        brush = randomColor();
+    }
+}, 20);
+
 // eraser
-eraser.addEventListener('click', function () { brush = "white"; });
+eraser.addEventListener('click', function () { 
+    rainbowToggle = false;
+    brush = "white"; });
 
 
 // functions
@@ -73,16 +96,19 @@ function makeCanvas(pixelNum) {
             pixel.addEventListener('mousedown', function () {
                 pixel.style.backgroundColor = brush;
             });
-            pixel.addEventListener('mousedown mouseover', function () {
-                pixel.style.backgroundColor = brush;
-            });
+            //pixel.addEventListener('mouseleave', function () {
+               // pixel.style.backgroundColor = previousColor;
+            //});
             vertical.appendChild(pixel);
         }
     }
 };
 
 function randomColor() {
-    return rgba(Math.random()*250, Math.random()*250, Math.random()*250, Math.random());
+    const red = Math.random()*256;
+    const blue = Math.random()*256;
+    const green = Math.random()*256;
+    return `rgba(${red}, ${blue}, ${green}, 1)`;
 };
 
 function clearCanvas() {
